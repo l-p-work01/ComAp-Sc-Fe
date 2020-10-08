@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Prerequisities
+
+The project ComAp.Sc.Bl must be started prior running this project. It is expected that the project ComAp.Sc.Bl is running on the url https://localhost:44320.
+This url is used by the CommentService. See the variable commentUrl in the service.
