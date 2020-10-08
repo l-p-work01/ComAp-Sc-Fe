@@ -1,0 +1,22 @@
+<form [formGroup]="addCommentForm" (ngSubmit)="onSubmit(addCommentForm.value)">
+    <label for="comment">Novy komentar</label>
+    <input id="comment" type="text" formControlName="comment">        
+    <button class="button">Pridat komentar</button>
+  </form>
+
+
+<p>Zoznam komentarov</p>
+<table class="browserref notranslate">
+    <tbody>
+        <tr>
+            <th style="width:30%;font-size:16px;text-align:left;" title="Datetime">Datum</th>
+            <th style="width:40%; text-align:left;" title="Comment">Komentar</th>
+            <th style="width:30%; text-align:left;" title="Comment">Odstran</th>
+        </tr>
+        <tr *ngFor="let comment of mycomments">
+            <td style="width:30%;text-align:left;">{{comment.datetime | date :'short':'cs' }}</td>
+            <td style="width:40%; text-align:left;">{{comment.commentText}}</td>
+            <td style="width:30%; text-align:left;"><button class="delete" title="zmaz komentar"  (click)="delete(comment)">X</button></td>
+        </tr>
+    </tbody>
+</table>
